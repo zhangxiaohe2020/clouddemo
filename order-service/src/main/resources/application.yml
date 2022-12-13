@@ -10,10 +10,14 @@ spring:
     name: orderservice
   cloud:
     nacos:
-      server-addr: localhost:8848,localhost:8847,localhost:8849 # nacos服务地址
+      server-addr: localhost:8848 # nacos服务地址
       discovery:
-        namespace: 4d6ce343-9e1b-44df-a90f-2cf2b6b3d177 # dev环境
-        ephemeral: false # 是否是临时实例
+        cluster-name: SH
+    #nacos:
+    #  server-addr: localhost:8848,localhost:8847,localhost:8849 # nacos服务地址
+    #  discovery:
+    #    namespace: 4d6ce343-9e1b-44df-a90f-2cf2b6b3d177 # dev环境
+   #     ephemeral: false # 是否是临时实例
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
